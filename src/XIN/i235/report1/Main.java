@@ -17,8 +17,7 @@ public class Main {
         String[][] space = new String[20][20];
         // 正例負例五個ずつ
         Example[] examples = new Example[10];
-        // 例を初期化する
-        // ランダムでデータ入り
+        // 例を初期化する　ランダムでデータ入り
         for (exampleN = 0; exampleN < 10; exampleN++){
             examples[exampleN] = new Example();
             examples[exampleN].type = exampleN < 5;
@@ -26,8 +25,7 @@ public class Main {
         for (pointY = 0; pointY < 20; pointY++)
             for (pointX = 0; pointX < 20; pointX++)
                 space[pointX][pointY] = ".";
-        // 正例負例をスペースに記入する
-        // 同じデータを取り除くこと
+        // 正例負例をスペースに記入する　同じデータを取り除く
         for (exampleN = 0; exampleN < 10; exampleN++)
             if (space[examples[exampleN].x][examples[exampleN].y].equals(".")) {
                 if (examples[exampleN].type)
@@ -46,8 +44,7 @@ public class Main {
             System.out.println();
         }
         System.out.println();
-        // 1-NN から k-NNで判定する
-        // 今k = 5
+        // 1-NN から k-NNで判定する　今k = 5
         String[][][] kNNspace = new String[K][20][20];
         for (int spaceK = 0; spaceK < K; spaceK++)
             kNNspace[spaceK] = space;
