@@ -4,6 +4,7 @@ import java.util.Random;
 
 class Example {
     int x,y;
+    boolean type;
 
     Example(){
         Random random = new Random();

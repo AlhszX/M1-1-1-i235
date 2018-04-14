@@ -1,5 +1,5 @@
 package XIN.i235.report1;
-import XIN.ToolPackage.MyTool;
+
 public class Main {
     //第一回レポート　3点
     //締め切り4.25
@@ -11,138 +11,94 @@ public class Main {
     // 正例負例のランダム配置　【達成】
     public static void main(String[] args){
         //System.out.println("report1");
+        int K = 5;
+        int exampleN, pointX, pointY;
         // 20*20のスペース
         String[][] space = new String[20][20];
         // 正例負例五個ずつ
-        Example[] eNegative = new Example[5];
-        Example[] ePositive = new Example[5];
+        Example[] examples = new Example[10];
         // 例を初期化する
         // ランダムでデータ入り
-        for (int exampleN = 0; exampleN < 5; exampleN++){
-            eNegative[exampleN] = new Example();
-            ePositive[exampleN] = new Example();
+        for (exampleN = 0; exampleN < 10; exampleN++){
+            examples[exampleN] = new Example();
+            examples[exampleN].type = exampleN < 5;
         }
-
-        for (int pointY = 0; pointY < 20; pointY++)
-            for (int pointX = 0; pointX < 20; pointX ++)
+        for (pointY = 0; pointY < 20; pointY++)
+            for (pointX = 0; pointX < 20; pointX++)
                 space[pointX][pointY] = ".";
         // 正例負例をスペースに記入する
         // 同じデータを取り除くこと
-        for (int exampleN = 0; exampleN < 5; exampleN++) {
-            if (space[eNegative[exampleN].x][eNegative[exampleN].y].equals(".")) {
-                space[eNegative[exampleN].x][eNegative[exampleN].y] = "X";
-                //space[eNegative[exampleN].x][eNegative[exampleN].y] = "N";
+        for (exampleN = 0; exampleN < 10; exampleN++)
+            if (space[examples[exampleN].x][examples[exampleN].y].equals(".")) {
+                if (examples[exampleN].type)
+                    space[examples[exampleN].x][examples[exampleN].y] = "@";
+                else space[examples[exampleN].x][examples[exampleN].y] = "X";
             } else {
-                System.out.println("Oops! Get same data in eNegative and RESET..");
-                eNegative[exampleN] = new Example();
+                System.out.println("Oops! RESET the same data..");
+                examples[exampleN] = new Example();
                 exampleN--;
             }
-        }
-        for (int exampleN = 0; exampleN < 5; exampleN++){
-            if (space[ePositive[exampleN].x][ePositive[exampleN].y].equals(".")){
-                space[ePositive[exampleN].x][ePositive[exampleN].y] = "@";
-                //space[ePositive[exampleN].x][ePositive[exampleN].y] = "P";
-            }else {
-                System.out.println("Oops! Get same data in ePositive and RESET..");
-                ePositive[exampleN] = new Example();
-                exampleN--;
-            }
-        }
-        //just for test
-        //for (int exampleN = 0; exampleN < 5; exampleN++){
-        //        System.out.println("Nx:" + eNegative[exampleN].x + " Ny:" + eNegative[exampleN].y);
-        //        System.out.println("Px:" + ePositive[exampleN].x + " Py:" + ePositive[exampleN].y);
-        //}
-        //「スペース と 例」を出力する
+        //判定する前の「スペース と 例」を出力する
         System.out.println("Output space and data :");
-        for (int pointY = 0; pointY < 20; pointY++){
-            for (int pointX = 0; pointX < 20; pointX++){
+        for (pointY = 0; pointY < 20; pointY++){
+            for (pointX = 0; pointX < 20; pointX++)
                 System.out.print(space[pointX][pointY] + "  ");
-            }
             System.out.println();
         }
         System.out.println();
         // 1-NN から k-NNで判定する
-        // 今は一から五まで
-        int k = 5;
-        MyTool myTool = new MyTool();
-        String[][][] kNNspace = new String[k][20][20];
-        for (int spaceK = 0; spaceK < k; spaceK++)
+        // 今k = 5
+        String[][][] kNNspace = new String[K][20][20];
+        for (int spaceK = 0; spaceK < K; spaceK++)
             kNNspace[spaceK] = space;
 
         NearestExample[] nearestExampleRank;
-        int temNDisX, temPDisX, temNDisY, temPDisY, numberK, rankingNumber;
-        double temNDis, temPDis;
+        int temDisX, temDisY, nowK, nN, nP, top;
+        int compared, comparing;
+        double temDis;
+        NearestExample temNE;
 
-        for (numberK = 0; numberK < k; numberK++){
+        for (nowK = 0; nowK < K; nowK++){
+            for (pointY =0; pointY < 20; pointY++){
+                for (pointX = 0; pointX < 20; pointX++){
+                    nearestExampleRank = new NearestExample[10]; // set and reset nearestExample
+                    for (exampleN = 0; exampleN < 10; exampleN++){
+                        temDisX = pointX -examples[exampleN].x;
+                        temDisY = pointY -examples[exampleN].y;
+                        temDis = Math.sqrt(temDisX *temDisX +temDisY *temDisY);
 
-            for (int pointY =0; pointY < 20; pointY++){
-                for (int pointX = 0; pointX < 20; pointX++){
-                    // set and reset nearestExample
-                    nearestExampleRank = new NearestExample[10];
-                    rankingNumber = 0;
-
-                    for (int exampleN = 0; exampleN < 5; exampleN++){
-
-                        temNDisX = pointX -eNegative[exampleN].x;
-                        temNDisY = pointY -eNegative[exampleN].y;
-                        temNDis = myTool.makeDistancing(temNDisX, temNDisY);
-                        temPDisX = pointX -ePositive[exampleN].x;
-                        temPDisY = pointY -ePositive[exampleN].y;
-                        temPDis = myTool.makeDistancing(temPDisX, temPDisY);
-
-                        nearestExampleRank[rankingNumber] = new NearestExample();
-                        nearestExampleRank[rankingNumber].distancing = temNDis;
-                        nearestExampleRank[rankingNumber].type = false;
-                        rankingNumber++;
-                        //System.out.println(rankingNumber);
-                        nearestExampleRank[rankingNumber] = new NearestExample();
-                        nearestExampleRank[rankingNumber].distancing = temPDis;
-                        nearestExampleRank[rankingNumber].type = true;
-                        rankingNumber++;
-                        //System.out.println(rankingNumber);
+                        nearestExampleRank[exampleN] = new NearestExample();
+                        nearestExampleRank[exampleN].distancing = temDis;
+                        nearestExampleRank[exampleN].type = exampleN < 5;
                     }
-                    NearestExample temNE = new NearestExample();
-                    int i, j;
-                    for (i = 0; i < 9; i++){
-                        for (j = 0; j < 9 -i; j++){
-                            if (nearestExampleRank[j].distancing > nearestExampleRank[j +1].distancing){
-                                temNE = nearestExampleRank[j];
-                                nearestExampleRank[j] = nearestExampleRank[j +1];
-                                nearestExampleRank[j +1] = temNE;
+                    for (compared = 0; compared < 9; compared++)
+                        for (comparing = 0; comparing < 9 -compared; comparing++)
+                            if (nearestExampleRank[comparing].distancing > nearestExampleRank[comparing +1].distancing){
+                                //swap data
+                                temNE = nearestExampleRank[comparing];
+                                nearestExampleRank[comparing] = nearestExampleRank[comparing +1];
+                                nearestExampleRank[comparing +1] = temNE;
                             }
-                        }
-                    }
-                    int nN = 0, nP = 0;
-                    for (int top = 0; top < numberK +1; top++){
-                        if (!nearestExampleRank[top].type)
-                            nN++;
-                        else
+                    for (top = 0, nN = 0, nP = 0; top < nowK +1; top++)
+                        if (nearestExampleRank[top].type)
                             nP++;
-                    }
-                    if (kNNspace[numberK][pointX][pointY].equals(".")){
+                        else nN++;
+                    if (kNNspace[nowK][pointX][pointY].equals("."))
                         if (nN > nP)
-                            kNNspace[numberK][pointX][pointY] = "x";
-                        else
-                            kNNspace[numberK][pointX][pointY] = "o";
-                    }
-
+                            kNNspace[nowK][pointX][pointY] = "x";
+                        else kNNspace[nowK][pointX][pointY] = "o";
                 }
             }
-
         }
-
-        for (int i = 0; i < k; i++){
-            int temK = i +1;
-            System.out.println("Output " + temK + "-NN result :");
-            for (int pointY = 0; pointY < 20; pointY++){
-                for (int pointX = 0; pointX < 20; pointX++){
-                    System.out.print(kNNspace[i][pointX][pointY] + "  ");
-                }
+        //　すべての結果を出力する
+        for (nowK = 0; nowK < K; nowK++){
+            System.out.println(String.format("Output %d-NN result :", nowK +1));
+            for (pointY = 0; pointY < 20; pointY++){
+                for (pointX = 0; pointX < 20; pointX++)
+                    System.out.print(kNNspace[nowK][pointX][pointY] + "  ");
                 System.out.println();
             }
             System.out.println();
         }
     }
-
 }
