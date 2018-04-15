@@ -56,9 +56,13 @@ public class Main {
         System.out.println();
         // 1-NN から k-NNで判定する　今k = 5
         String[][][] kNNspace = new String[K][20][20];
-        for (int spaceK = 0; spaceK < K; spaceK++) {
-            kNNspace[spaceK] = space;
-        }
+        /*for (int spaceK = 0; spaceK < K; spaceK++) {
+            for (int i = 0; i < 20 ; i++){
+                for ( int j = 0; j < 20 ; j ++){
+                    kNNspace[spaceK][i][j] = space[i][j];
+                }
+            }
+        }*/
         NearestExample[] nearestExampleRank;
         int temDisX, temDisY, nowK, nN, nP, top;
         int compared, comparing;
@@ -105,11 +109,18 @@ public class Main {
                         System.out.println("K = " + nowK + " point: " + pointX + "," + pointY + "");
                         System.out.println("nP = " + nP + " ,nN = " + nN);
                         System.out.println("result:" + kNNspace[nowK][pointX][pointY]);
+                        if (nowK != 0) {
+                            System.out.println("result -1:" + kNNspace[nowK - 1][pointX][pointY]);
+                        }
                     }
                     //just for test
-                    System.out.println(String.format("point %d, %d:", pointX, pointY));
+                    /*System.out.println(String.format("point %d, %d:", pointX, pointY));
                     for (int i = 0; i < 10; i++) {
                         System.out.println("dis: " + nearestExampleRank[i].distancing + " type: " + nearestExampleRank[i].type);
+                    }*/
+                } else {
+                    for (int i = 0; i < 5; i++) {
+                        kNNspace[i][pointX][pointY] = space[pointX][pointY];
                     }
                 }
             }
