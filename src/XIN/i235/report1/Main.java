@@ -42,9 +42,9 @@ public class Main {
             }
         }
         //just for test
-        for (int i = 0; i < 10; i++) {
+        /*for (int i = 0; i < 10; i++) {
             System.out.println("point:" + examples[i].x + "," + examples[i].y + " type: " + examples[i].type);
-        }
+        }*/
         //判定する前の「スペース と 例」を出力する
         System.out.println("Output space and data :");
         for (pointY = 0; pointY < 20; pointY++) {
@@ -106,12 +106,12 @@ public class Main {
                             kNNspace[nowK][pointX][pointY] = "o";
                         }
                         //just for test
-                        System.out.println("K = " + nowK + " point: " + pointX + "," + pointY + "");
+                        /*System.out.println("K = " + nowK + " point: " + pointX + "," + pointY + "");
                         System.out.println("nP = " + nP + " ,nN = " + nN);
                         System.out.println("result:" + kNNspace[nowK][pointX][pointY]);
                         if (nowK != 0) {
                             System.out.println("result -1:" + kNNspace[nowK - 1][pointX][pointY]);
-                        }
+                        }*/
                     }
                     //just for test
                     /*System.out.println(String.format("point %d, %d:", pointX, pointY));
