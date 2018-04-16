@@ -54,15 +54,8 @@ public class Main {
             System.out.println();
         }
         System.out.println();
-        // 1-NN から k-NNで判定する　今k = 5
-        String[][][] kNNspace = new String[K][20][20];
-        /*for (int spaceK = 0; spaceK < K; spaceK++) {
-            for (int i = 0; i < 20 ; i++){
-                for ( int j = 0; j < 20 ; j ++){
-                    kNNspace[spaceK][i][j] = space[i][j];
-                }
-            }
-        }*/
+        // 1-NN から k-NN中の奇数で判定する　今k = 5
+        String[][][] kNNspace = new String[K / 2 + 1][20][20];
         NearestExample[] nearestExampleRank;
         int temDisX, temDisY, nowK, nN, nP, top;
         int compared, comparing;
@@ -92,8 +85,8 @@ public class Main {
                             }
                         }
                     }
-                    for (nowK = 0; nowK < K; nowK++) {
-                        for (top = 0, nN = 0, nP = 0; top < nowK + 1; top++) {
+                    for (nowK = 0; nowK < K / 2 + 1; nowK++) {
+                        for (top = 0, nN = 0, nP = 0; top < nowK + 1; top = 1 + 2 * top) {
                             if (nearestExampleRank[top].type) {
                                 nP++;
                             } else {
@@ -119,15 +112,15 @@ public class Main {
                         System.out.println("dis: " + nearestExampleRank[i].distancing + " type: " + nearestExampleRank[i].type);
                     }*/
                 } else {
-                    for (int i = 0; i < 5; i++) {
+                    for (int i = 0; i < K / 2 + 1; i++) {
                         kNNspace[i][pointX][pointY] = space[pointX][pointY];
                     }
                 }
             }
         }
         //　すべての結果を出力する
-        for (nowK = 0; nowK < K; nowK++) {
-            System.out.println(String.format("Output %d-NN result :", nowK + 1));
+        for (nowK = 0; nowK < K / 2 + 1; nowK++) {
+            System.out.println(String.format("Output %d-NN result :", nowK * 2 + 1));
             for (pointY = 0; pointY < 20; pointY++) {
                 for (pointX = 0; pointX < 20; pointX++) {
                     System.out.print(kNNspace[nowK][pointX][pointY] + "  ");
