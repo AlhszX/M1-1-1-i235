@@ -20,10 +20,10 @@ public class Main {
         // 20*20のスペース
         String[][] space = new String[xMax][yMax];
         // 正例負例五個ずつ
-        Example[] examples = new Example[numberOfExample];
+        ExampleR1[] examples = new ExampleR1[numberOfExample];
         // 例を初期化する　ランダムでデータ入り
         for (exampleN = 0; exampleN < 10; exampleN++) {
-            examples[exampleN] = new Example();
+            examples[exampleN] = new ExampleR1();
             examples[exampleN].type = exampleN < positiveExample;
         }
         for (pointY = 0; pointY < yMax; pointY++) {
@@ -41,7 +41,7 @@ public class Main {
                 }
             } else {
                 System.out.println("Oops! RESET the same data..");
-                examples[exampleN] = new Example();
+                examples[exampleN] = new ExampleR1();
                 exampleN--;
             }
         }
