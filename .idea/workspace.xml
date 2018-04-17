@@ -12,11 +12,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/XIN/i235/report1/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="740">
-              <caret line="54" column="44" selection-start-line="54" selection-start-column="44" selection-end-line="54" selection-end-column="44" />
+            <state relative-caret-position="187">
+              <caret line="11" column="44" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/XIN/i235/report2/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+              <folding>
+                <element signature="e#91#92#0" expanded="true" />
+                <element signature="e#127#128#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -53,12 +66,13 @@
         <option value="$PROJECT_DIR$/.idea/vcs.xml" />
         <option value="$PROJECT_DIR$/src/XIN/i235/report1/Example.java" />
         <option value="$PROJECT_DIR$/src/XIN/i235/report1/Main.java" />
+        <option value="$PROJECT_DIR$/src/XIN/i235/report2/Main.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-717" />
-    <option name="y" value="-12" />
+    <option name="x" value="117" />
+    <option name="y" value="-30" />
     <option name="width" value="1941" />
     <option name="height" value="1101" />
   </component>
@@ -68,31 +82,75 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="M1-1-1-i235" type="b2602c69:ProjectViewProjectNode" />
-              <item name="M1-1-1-i235" type="462c0819:PsiDirectoryNode" />
+              <item name="M1-1-i235-report" type="b2602c69:ProjectViewProjectNode" />
+              <item name="M1-1-i235-report" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="M1-1-1-i235" type="b2602c69:ProjectViewProjectNode" />
-              <item name="M1-1-1-i235" type="462c0819:PsiDirectoryNode" />
+              <item name="M1-1-i235-report" type="b2602c69:ProjectViewProjectNode" />
+              <item name="M1-1-i235-report" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="M1-1-1-i235" type="b2602c69:ProjectViewProjectNode" />
-              <item name="M1-1-1-i235" type="462c0819:PsiDirectoryNode" />
+              <item name="M1-1-i235-report" type="b2602c69:ProjectViewProjectNode" />
+              <item name="M1-1-i235-report" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="XIN" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="M1-1-i235-report" type="b2602c69:ProjectViewProjectNode" />
+              <item name="M1-1-i235-report" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="XIN" type="462c0819:PsiDirectoryNode" />
+              <item name="i235" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="M1-1-i235-report" type="b2602c69:ProjectViewProjectNode" />
+              <item name="M1-1-i235-report" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="XIN" type="462c0819:PsiDirectoryNode" />
+              <item name="i235" type="462c0819:PsiDirectoryNode" />
+              <item name="report1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="M1-1-i235-report" type="b2602c69:ProjectViewProjectNode" />
+              <item name="M1-1-i235-report" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="XIN" type="462c0819:PsiDirectoryNode" />
+              <item name="i235" type="462c0819:PsiDirectoryNode" />
+              <item name="report2" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="M1-1-i235-report" type="58d84e3e:PackageViewProjectNode" />
+              <item name="report_1" type="616d4139:PackageViewModuleNode" />
+            </path>
+            <path>
+              <item name="M1-1-i235-report" type="58d84e3e:PackageViewProjectNode" />
+              <item name="report_1" type="616d4139:PackageViewModuleNode" />
+              <item name="XIN" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="M1-1-i235-report" type="58d84e3e:PackageViewProjectNode" />
+              <item name="report_1" type="616d4139:PackageViewModuleNode" />
+              <item name="XIN" type="1f31426a:PackageElementNode" />
+              <item name="i235.report1" type="1f31426a:PackageElementNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -115,7 +173,18 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main (1)">
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="XIN.i235.report2.Main" />
+      <module name="report_1" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="XIN.i235.report2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="XIN.i235.report1.Main" />
       <module name="report_1" />
@@ -168,8 +237,13 @@
       <properties />
       <listeners />
     </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.Main (1)" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -189,17 +263,17 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1455" height="935" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="10" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.15815085" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
@@ -208,22 +282,49 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection Results" order="11" weight="0.32978722" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Inspection Results" order="11" weight="0.32978722" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Messages" order="10" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/XIN/i235/report1/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1173">
+          <caret line="69" column="76" selection-start-line="69" selection-start-column="76" selection-end-line="69" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/XIN/i235/report1/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1173">
+          <caret line="69" column="76" selection-start-line="69" selection-start-column="76" selection-end-line="69" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/XIN/i235/report1/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1173">
+          <caret line="69" column="76" lean-forward="true" selection-start-line="69" selection-start-column="76" selection-end-line="69" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/XIN/i235/report1/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="54" column="44" selection-start-line="54" selection-start-column="44" selection-end-line="54" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/XIN/i235/report1/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="918">
@@ -427,10 +528,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2397" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/XIN/i235/report1/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="740">
-          <caret line="54" column="44" selection-start-line="54" selection-start-column="44" selection-end-line="54" selection-end-column="44" />
+        <state relative-caret-position="187">
+          <caret line="11" column="44" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/XIN/i235/report2/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+          <folding>
+            <element signature="e#91#92#0" expanded="true" />
+            <element signature="e#127#128#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
