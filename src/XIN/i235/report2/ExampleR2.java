@@ -1,15 +1,12 @@
 package XIN.i235.report2;
 
-import java.util.Random;
-
 class ExampleR2 {
     int x, y;
     boolean type;
 
-    /*ExampleR2(int min, int max, boolean type) {
-        Random random = new Random();
-        x = random.nextInt(max) + min;
-        y = random.nextInt(max) + min;
+    ExampleR2(int minX, int maxX, int minY, int maxY, boolean type) {
+        x = (int) (Math.random() * maxX) + minX;
+        y = (int) (Math.random() * maxY) + minY;
         this.type = type;
-    }*/
+    }
 }

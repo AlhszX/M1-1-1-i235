@@ -13,9 +13,18 @@ public class Main {
         ExampleR2[] examples = new ExampleR2[10];
 
         for (int number = 0; number < 10; number++) {
-            examples[number].x = int(Math.random());
-            examples[number].y = 1;
-            examples[number].type = number < 5;
+            if (number < 5) {
+                examples[number] = new ExampleR2(0, 10, 0, 20, true);
+            } else {
+                examples[number] = new ExampleR2(10, 20, 0, 20, false);
+            }
         }
+
+
+        for (int i = 0; i < examples.length; i++) {
+            System.out.println("number: " + i);
+            System.out.println(" x: " + examples[i].x + " y: " + examples[i].y + " type: " + examples[i].type);
+        }
+
     }
 }
