@@ -12,15 +12,13 @@ public class Main {
     public static void main(String[] args) {
         //System.out.println("report1");
         int K = 5;
-        int xMax = 20, yMax = 20;
-        int positiveExample = 5, negativeExample = 5;
-        int numberOfExample = positiveExample + negativeExample;
-
+        int xMax = 20, yMax = 20;// 20*20のスペース
+        int positiveExample = 5, negativeExample = 5;// 正例負例五個ずつ
         int exampleN, pointX, pointY;
-        // 20*20のスペース
+
         String[][] space = new String[xMax][yMax];
-        // 正例負例五個ずつ
-        ExampleR1[] examples = new ExampleR1[numberOfExample];
+        ExampleR1[] examples = new ExampleR1[positiveExample + negativeExample];
+
         // 例を初期化する　ランダムでデータ入り
         for (exampleN = 0; exampleN < 10; exampleN++) {
             examples[exampleN] = new ExampleR1();
@@ -32,7 +30,7 @@ public class Main {
             }
         }
         // 正例負例をスペースに記入する　同じデータを取り除く
-        for (exampleN = 0; exampleN < numberOfExample; exampleN++) {
+        for (exampleN = 0; exampleN < examples.length; exampleN++) {
             if (space[examples[exampleN].x][examples[exampleN].y].equals(".")) {
                 if (examples[exampleN].type) {
                     space[examples[exampleN].x][examples[exampleN].y] = "@";
@@ -54,33 +52,26 @@ public class Main {
         String[][][] kNNspace = new String[K / 2 + 1][xMax][yMax];
         NearestExample[] nearestExampleRank;
         int temDisX, temDisY, nowK, nN, nP, top;
-        int compared, comparing;
         double temDis;
-        NearestExample temNE;
 
         for (pointY = 0; pointY < yMax; pointY++) {
             for (pointX = 0; pointX < xMax; pointX++) {
-                if (space[pointX][pointY].equals(".")) {
-                    nearestExampleRank = new NearestExample[numberOfExample]; // reset nearestExample
-                    for (exampleN = 0; exampleN < numberOfExample; exampleN++) {
-                        temDisX = pointX - examples[exampleN].x;
-                        temDisY = pointY - examples[exampleN].y;
-                        temDis = Math.sqrt(temDisX * temDisX + temDisY * temDisY);
+
+                if (space[pointX][pointY].equals(".")) {//data point　以外の点を判断する
+                    nearestExampleRank = new NearestExample[examples.length]; // reset nearestExample
+
+                    for (exampleN = 0; exampleN < nearestExampleRank.length; exampleN++) {
+                        temDisX = pointX - examples[exampleN].x;//ｘ距離
+                        temDisY = pointY - examples[exampleN].y;//ｙ距離
+                        temDis = Math.sqrt(temDisX * temDisX + temDisY * temDisY);//実距離
 
                         nearestExampleRank[exampleN] = new NearestExample();
                         nearestExampleRank[exampleN].distancing = temDis;
                         nearestExampleRank[exampleN].type = exampleN < positiveExample;
                     }
-                    for (compared = 0; compared < numberOfExample - 1; compared++) {
-                        for (comparing = 0; comparing < numberOfExample - 1 - compared; comparing++) {
-                            if (nearestExampleRank[comparing].distancing > nearestExampleRank[comparing + 1].distancing) {
-                                //swap data
-                                temNE = nearestExampleRank[comparing];
-                                nearestExampleRank[comparing] = nearestExampleRank[comparing + 1];
-                                nearestExampleRank[comparing + 1] = temNE;
-                            }
-                        }
-                    }
+
+                    BubbleSort(nearestExampleRank);//距離の大きさによって配列を整理する
+                    //今k==5　配列頭の1,3,5個ポイントによて判断する
                     for (nowK = 0; nowK < K / 2 + 1; nowK++) {
                         for (top = 0, nN = 0, nP = 0; top < nowK + 1; top = 1 + 2 * top) {
                             if (nearestExampleRank[top].type) {
@@ -89,24 +80,14 @@ public class Main {
                                 nN++;
                             }
                         }
+                        //多数決で判断する　そして　マークする
                         if (nN > nP) {
                             kNNspace[nowK][pointX][pointY] = "x";
                         } else {
                             kNNspace[nowK][pointX][pointY] = "o";
                         }
-                        //just for test
-                        /*System.out.println("K = " + nowK + " point: " + pointX + "," + pointY + "");
-                        System.out.println("nP = " + nP + " ,nN = " + nN);
-                        System.out.println("result:" + kNNspace[nowK][pointX][pointY]);
-                        if (nowK != 0) {
-                            System.out.println("result -1:" + kNNspace[nowK - 1][pointX][pointY]);
-                        }*/
                     }
-                    //just for test
-                    /*System.out.println(String.format("point %d, %d:", pointX, pointY));
-                    for (int i = 0; i < 10; i++) {
-                        System.out.println("dis: " + nearestExampleRank[i].distancing + " type: " + nearestExampleRank[i].type);
-                    }*/
+                    //データポイントの場合はそのまま出力スペースに書く
                 } else {
                     for (int i = 0; i < K / 2 + 1; i++) {
                         kNNspace[i][pointX][pointY] = space[pointX][pointY];
@@ -114,26 +95,40 @@ public class Main {
                 }
             }
         }
-
         //判定する前の「スペース と 例」を出力する
         System.out.println("Output space and data :");
-        for (pointY = 0; pointY < yMax; pointY++) {
-            for (pointX = 0; pointX < xMax; pointX++) {
-                System.out.print(space[pointX][pointY] + "  ");
-            }
-            System.out.println();
-        }
+        PrintSpace(space, yMax, xMax);
         System.out.println();
         //　すべての結果を出力する
         for (nowK = 0; nowK < K / 2 + 1; nowK++) {
             System.out.println(String.format("Output %d-NN result :", nowK * 2 + 1));
-            for (pointY = 0; pointY < yMax; pointY++) {
-                for (pointX = 0; pointX < xMax; pointX++) {
-                    System.out.print(kNNspace[nowK][pointX][pointY] + "  ");
-                }
-                System.out.println();
+            PrintSpace(kNNspace[nowK], yMax, xMax);
+            System.out.println();
+        }
+    }
+    //出力
+    private static void PrintSpace(String[][] s, int yMax, int xMax) {
+        int pointX, pointY;
+        for (pointY = 0; pointY < yMax; pointY++) {
+            for (pointX = 0; pointX < xMax; pointX++) {
+                System.out.print(s[pointX][pointY] + "  ");
             }
             System.out.println();
         }
     }
+    //Bubble Sort 方法で配列を小さい順　整理する
+    private static void BubbleSort(NearestExample[] rank) {
+        int compared, comparing;
+        NearestExample temNE;
+        for (compared = 0; compared < rank.length - 1; compared++) {
+            for (comparing = 0; comparing < rank.length - 1 - compared; comparing++) {
+                if (rank[comparing].distancing > rank[comparing + 1].distancing) {
+                    temNE = rank[comparing];
+                    rank[comparing] = rank[comparing + 1];
+                    rank[comparing + 1] = temNE;
+                }
+            }
+        }
+    }
+
 }
