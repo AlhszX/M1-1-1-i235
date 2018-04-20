@@ -20,10 +20,9 @@ public class Main {
             }
         }
 
-
         for (int i = 0; i < examples.length; i++) {
             System.out.println("number: " + i);
-            System.out.println(" x: " + examples[i].x + " y: " + examples[i].y + " type: " + examples[i].type);
+            System.out.println(" point: " + examples[i].x + "," + examples[i].y + " type: " + examples[i].type);
         }
 
     }

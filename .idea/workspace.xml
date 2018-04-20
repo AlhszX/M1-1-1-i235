@@ -13,10 +13,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/XIN/i235/report1/Main.java">
+        <entry file="file://$PROJECT_DIR$/src/XIN/i235/report2/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="121" column="11" selection-start-line="121" selection-start-column="11" selection-end-line="121" selection-end-column="11" />
+            <state relative-caret-position="340">
+              <caret line="20" column="9" lean-forward="true" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -62,14 +62,14 @@
         <option value="$PROJECT_DIR$/.idea/vcs.xml" />
         <option value="$PROJECT_DIR$/src/XIN/i235/report1/Example.java" />
         <option value="$PROJECT_DIR$/src/XIN/i235/report2/ExampleR2.java" />
-        <option value="$PROJECT_DIR$/src/XIN/i235/report2/Main.java" />
         <option value="$PROJECT_DIR$/src/XIN/i235/report1/ExampleR1.java" />
         <option value="$PROJECT_DIR$/src/XIN/i235/report1/NearestExample.java" />
         <option value="$PROJECT_DIR$/src/XIN/i235/report1/Main.java" />
+        <option value="$PROJECT_DIR$/src/XIN/i235/report2/Main.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-20" />
     <option name="y" value="-14" />
     <option name="width" value="2183" />
@@ -172,7 +172,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.Main (1)">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="XIN.i235.report2.Main" />
       <module name="report_1" />
@@ -242,8 +242,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main (1)" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -261,8 +261,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1455" height="935" extended-state="7" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1455" height="935" extended-state="6" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -272,7 +271,7 @@
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="6" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.44403893" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.41849148" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="6" />
@@ -589,13 +588,6 @@
         <state relative-caret-position="-2397" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/XIN/i235/report2/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/XIN/i235/report2/ExampleR2.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -630,8 +622,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/XIN/i235/report1/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
+        <state relative-caret-position="55">
           <caret line="121" column="11" selection-start-line="121" selection-start-column="11" selection-end-line="121" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/XIN/i235/report2/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="9" lean-forward="true" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
         </state>
       </provider>
     </entry>
