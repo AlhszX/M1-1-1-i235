@@ -13,3 +13,9 @@ class ExampleR1 {
     }
 
 }
+
+class NearestExample {
+    boolean type;
+    double distance;
+
+}

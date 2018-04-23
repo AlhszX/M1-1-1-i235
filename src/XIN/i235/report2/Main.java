@@ -15,9 +15,8 @@ public class Main {
         System.out.println("report2");
 
         int cycleTimes = 10;
-
-        ExampleR2[] exampleSmall = new ExampleR2[10];
-        ExampleR2[] exampleSmaller = new ExampleR2[4];
+        int positiveDataOfSmallData = 5, negativeDataOfSmallData = 5;
+        int positiveDataOfSmallerData = 2, negativeDataOfSmallerData = 2;
 
         double[] resultSmall;
         double[] resultSmaller;
@@ -25,14 +24,21 @@ public class Main {
         double averageSmallN = 0, averageSmallP = 0;
         double averageSmallerN = 0, averageSmallerP = 0;
 
+        ExampleR2[] exampleSmall = new ExampleR2[positiveDataOfSmallData + negativeDataOfSmallData];
+        ExampleR2[] exampleSmaller = new ExampleR2[positiveDataOfSmallerData + negativeDataOfSmallerData];
+
         for (int time = 0; time < cycleTimes; time++) {
-            setData(5, 5, exampleSmall);
+
+            System.out.println(String.format("This is the %dst/nd/rd/th times loop .....", time + 1));
+            System.out.println();
+
+            setData(positiveDataOfSmallData, negativeDataOfSmallData, exampleSmall);
             hashRmDup(exampleSmall);
-            setData(2, 2, exampleSmaller);
+            setData(positiveDataOfSmallerData, negativeDataOfSmallerData, exampleSmaller);
             hashRmDup(exampleSmaller);
 
             System.out.println("Small Data:");
-            outPrintData(exampleSmall);
+            printOutData(exampleSmall);
             resultSmall = nearestNeighbor(exampleSmall);
 
             averageSmallP += resultSmall[0];
@@ -41,29 +47,16 @@ public class Main {
             System.out.println();
 
             System.out.println("Smaller Data:");
-            outPrintData(exampleSmaller);
+            printOutData(exampleSmaller);
             resultSmaller = nearestNeighbor(exampleSmaller);
 
             averageSmallerP += resultSmaller[0];
             averageSmallerN += resultSmaller[1];
+
+            System.out.println();
         }
-/*
-        setData(5, 5, exampleSmall);
-        hashRmDup(exampleSmall);
-        setData(2, 2, exampleSmaller);
-        hashRmDup(exampleSmaller);
 
-        System.out.println("Small Data:");
-        outPrintData(exampleSmall);
-        resultSmall = nearestNeighbor(exampleSmall);
-
-        System.out.println();
-
-        System.out.println("Smaller Data:");
-        outPrintData(exampleSmaller);
-        resultSmaller = nearestNeighbor(exampleSmaller);
-*/
-        System.out.println("-----------------------------------------the real result--------------------------------------------------------------------");
+        System.out.println("-----------------------------------------The REAL Result-----------------------------------------");
         System.out.println();
         System.out.println(String.format("Small Data %d times average result Positive is %f, Negative is %f", cycleTimes, averageSmallP / 10, averageSmallN / 10));
         System.out.println();
@@ -94,25 +87,25 @@ public class Main {
         }
     }
 
-    private static void outPrintData(ExampleR2[] exampleR2) {
+    private static void printOutData(ExampleR2[] exampleR2) {
         for (int i = 0; i < exampleR2.length; i++) {
-            System.out.println("number: " + i);
-            System.out.println(" point: " + exampleR2[i].x + "," + exampleR2[i].y + " type: " + exampleR2[i].type);
+            System.out.println("Data number: " + i + " point: " + exampleR2[i].x + "," + exampleR2[i].y + " type: " + exampleR2[i].type);
         }
     }
 
     private static double[] nearestNeighbor(ExampleR2[] exampleR2s) {
         Set<DataPoint> dataPointSet = new HashSet<>();
-        int i;
-        for (i = 0; i < exampleR2s.length; i++) {
-            dataPointSet.add(new DataPoint(exampleR2s[i].x, exampleR2s[i].y));
+        for (ExampleR2 elements : exampleR2s) {
+            dataPointSet.add(new DataPoint(elements.x, elements.y));
         }
-        int nExample, nP = 0, nN = 0;
+        int nExample, x, y;
+        int nP = 0, nN = 0;
         int trueNegativePoint = 0, truePositivePoint = 0;
         double temDisMin, temDisNow;
         boolean npFlag;
-        for (int y = 0; y < 20; y++) {
-            for (int x = 0; x < 20; x++) {
+
+        for (y = 0; y < 20; y++) {
+            for (x = 0; x < 20; x++) {
                 if (dataPointSet.add(new DataPoint(x, y))) {
                     temDisMin = Math.pow(x - exampleR2s[0].x, 2) + Math.pow(y - exampleR2s[0].y, 2);
                     npFlag = exampleR2s[0].type;
@@ -140,15 +133,11 @@ public class Main {
             }
         }
 
-        System.out.println("truePositivePoint: " + truePositivePoint + "  all Positive result Point: " + nP);
         double accuracyP = (double) truePositivePoint / (double) nP;
-        System.out.println(String.format("accuracyP: %f", accuracyP));
-        //System.out.println(accuracyP);
+        System.out.println(String.format("all Positive result Point: %d, true Positive Point: %d, accuracy of Positive: %f", truePositivePoint, nP, accuracyP));
 
-        System.out.println("trueNegativePoint: " + trueNegativePoint + "  all Negative result Point: " + nN);
         double accuracyN = (double) trueNegativePoint / (double) nN;
-        System.out.println(String.format("accuracyN: %f", accuracyN));
-        //System.out.println(accuracyN);
+        System.out.println(String.format("all Negative result Point: %d, true Negative Point: %d, accuracy of Negative: %f", trueNegativePoint, nN, accuracyN));
 
         return new double[]{accuracyP, accuracyN};
     }
