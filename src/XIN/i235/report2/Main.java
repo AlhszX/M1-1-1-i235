@@ -26,20 +26,26 @@ public class Main {
         //二つのデータ配列　　初期化
         ExampleR2[] exampleSmall = new ExampleR2[positiveDataOfSmallData + negativeDataOfSmallData];
         ExampleR2[] exampleSmaller = new ExampleR2[positiveDataOfSmallerData + negativeDataOfSmallerData];
+        //同じデータを取り除く　又は　データポイントを濾す
+        Set<DataPoint> dataPointSetSmall;
+        Set<DataPoint> dataPointSetSmaller;
         //１０回の循環
         for (int time = 0; time < cycleTimes; time++) {
+            //空き配列にする　しないと　やばいことが起きる
+            dataPointSetSmall = new HashSet<>();
+            dataPointSetSmaller = new HashSet<>();
 
             System.out.println(String.format("This is the %dst/nd/rd/th times loop .....", time + 1));
             System.out.println();
 
             setData(positiveDataOfSmallData, negativeDataOfSmallData, exampleSmall);
-            hashRmDup(exampleSmall);
+            hashRmDup(exampleSmall, dataPointSetSmall);
             setData(positiveDataOfSmallerData, negativeDataOfSmallerData, exampleSmaller);
-            hashRmDup(exampleSmaller);
+            hashRmDup(exampleSmaller, dataPointSetSmaller);
 
             System.out.println("Small Data:");
             printOutData(exampleSmall);
-            resultSmall = nearestNeighbor(exampleSmall);
+            resultSmall = nearestNeighbor(exampleSmall, dataPointSetSmall);
 
             averageSmallP += resultSmall[0];
             averageSmallN += resultSmall[1];
@@ -48,7 +54,7 @@ public class Main {
 
             System.out.println("Smaller Data:");
             printOutData(exampleSmaller);
-            resultSmaller = nearestNeighbor(exampleSmaller);
+            resultSmaller = nearestNeighbor(exampleSmaller, dataPointSetSmaller);
 
             averageSmallerP += resultSmaller[0];
             averageSmallerN += resultSmaller[1];
@@ -76,30 +82,28 @@ public class Main {
             }
         }
     }
+
     //同じデータがあれば　reset
-    private static void hashRmDup(ExampleR2[] examples) {
-        Set<ExampleR2> exampleR2Set = new HashSet<>();
+    private static void hashRmDup(ExampleR2[] examples, Set<DataPoint> dataPointSet) {
         for (int i = 0; i < examples.length; i++) {
-            if (!exampleR2Set.add(examples[i])) {
+            if (!dataPointSet.add(new DataPoint(examples[i].x, examples[i].y))) {
                 examples[i].setPoint();
                 System.out.println("Re Get Point Success!!");
                 i--;
             }
         }
     }
+
     //出力
     private static void printOutData(ExampleR2[] exampleR2) {
         for (int i = 0; i < exampleR2.length; i++) {
             System.out.println("Data number: " + i + " point: " + exampleR2[i].x + "," + exampleR2[i].y + " type: " + exampleR2[i].type);
         }
     }
+
     //ポイント判断
-    private static double[] nearestNeighbor(ExampleR2[] exampleR2s) {
-        //データポイントを計算しないため　まずhashに入れる
-        Set<DataPoint> dataPointSet = new HashSet<>();
-        for (ExampleR2 elements : exampleR2s) {
-            dataPointSet.add(new DataPoint(elements.x, elements.y));
-        }
+    private static double[] nearestNeighbor(ExampleR2[] exampleR2s, Set<DataPoint> dataPointSet) {
+
         int nExample, x, y;
         int nP = 0, nN = 0;
         int trueNegativePoint = 0, truePositivePoint = 0;
@@ -113,7 +117,7 @@ public class Main {
                     temDisMin = Math.pow(x - exampleR2s[0].x, 2) + Math.pow(y - exampleR2s[0].y, 2);
                     npFlag = exampleR2s[0].type;
                     //距離を計算する
-                    for (nExample = 0; nExample < exampleR2s.length; nExample++) {
+                    for (nExample = 1; nExample < exampleR2s.length; nExample++) {
                         temDisNow = Math.pow(x - exampleR2s[nExample].x, 2) + Math.pow(y - exampleR2s[nExample].y, 2);
                         if (temDisNow < temDisMin) {
                             temDisMin = temDisNow;

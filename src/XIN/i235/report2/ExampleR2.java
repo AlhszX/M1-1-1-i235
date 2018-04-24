@@ -4,12 +4,6 @@ class ExampleR2 {
     int x, y;
     boolean type;
 
-    /*ExampleR2(int minX, int maxX, int minY, int maxY, boolean type) {
-        x = (int) (Math.random() * maxX) + minX;
-        y = (int) (Math.random() * maxY) + minY;
-        this.type = type;
-    }*/
-
     void setPoint() {
         if (this.type) {
             x = (int) (Math.random() * 10);
@@ -54,7 +48,6 @@ class DataPoint {
     //同じデータを検査するため//簡単書き方
     @Override
     public boolean equals(Object obj) {
-
         //System.out.println("DataPoint's equals is run !!");
         //パラメータをチェックしてない、強さが足りない、時間があれば補足する
         DataPoint dataPoint = (DataPoint) obj;
