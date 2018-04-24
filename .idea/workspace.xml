@@ -11,7 +11,20 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/XIN/i235/report2/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="114" column="29" selection-start-line="114" selection-start-column="29" selection-end-line="114" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -35,6 +48,11 @@
       <find>Jump</find>
       <find>outPrintData</find>
       <find>DataPoint</find>
+      <find>PrintSpace</find>
+      <find>BubbleSort</find>
+      <find>K</find>
+      <find>kNearestNeighborAndDrawSpace</find>
+      <find>creatAndSort</find>
     </findStrings>
     <replaceStrings>
       <replace>pointX</replace>
@@ -42,6 +60,10 @@
       <replace>truePositivePoint</replace>
       <replace>nearestNeighbor</replace>
       <replace>printOutData</replace>
+      <replace>printSpace</replace>
+      <replace>bubbleSort</replace>
+      <replace>kNNAndDrawSpace</replace>
+      <replace>createAndSort</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -59,19 +81,18 @@
         <option value="$PROJECT_DIR$/src/XIN/ToolPackage/MyTool.java" />
         <option value="$PROJECT_DIR$/.idea/vcs.xml" />
         <option value="$PROJECT_DIR$/src/XIN/i235/report1/Example.java" />
-        <option value="$PROJECT_DIR$/src/XIN/i235/report1/Main.java" />
         <option value="$PROJECT_DIR$/src/XIN/i235/report1/ExampleR1.java" />
         <option value="$PROJECT_DIR$/src/XIN/i235/report1/NearestExample.java" />
+        <option value="$PROJECT_DIR$/src/XIN/i235/report1/Main.java" />
         <option value="$PROJECT_DIR$/src/XIN/i235/report2/ExampleR2.java" />
         <option value="$PROJECT_DIR$/src/XIN/i235/report2/Main.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1" />
-    <option name="y" value="1" />
-    <option name="width" value="2159" />
-    <option name="height" value="1379" />
+    <option name="x" value="1068" />
+    <option name="width" value="1101" />
+    <option name="height" value="1392" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -79,6 +100,29 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="M1-1-i235-report" type="58d84e3e:PackageViewProjectNode" />
+              <item name="report_1" type="616d4139:PackageViewModuleNode" />
+            </path>
+            <path>
+              <item name="M1-1-i235-report" type="58d84e3e:PackageViewProjectNode" />
+              <item name="report_1" type="616d4139:PackageViewModuleNode" />
+              <item name="XIN" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="M1-1-i235-report" type="58d84e3e:PackageViewProjectNode" />
+              <item name="report_1" type="616d4139:PackageViewModuleNode" />
+              <item name="XIN" type="1f31426a:PackageElementNode" />
+              <item name="i235.report1" type="1f31426a:PackageElementNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -110,7 +154,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="XIN" type="462c0819:PsiDirectoryNode" />
               <item name="i235" type="462c0819:PsiDirectoryNode" />
-              <item name="report1" type="462c0819:PsiDirectoryNode" />
+              <item name="report2" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="M1-1-i235-report" type="b2602c69:ProjectViewProjectNode" />
@@ -119,29 +163,7 @@
               <item name="XIN" type="462c0819:PsiDirectoryNode" />
               <item name="i235" type="462c0819:PsiDirectoryNode" />
               <item name="report2" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="M1-1-i235-report" type="58d84e3e:PackageViewProjectNode" />
-              <item name="report_1" type="616d4139:PackageViewModuleNode" />
-            </path>
-            <path>
-              <item name="M1-1-i235-report" type="58d84e3e:PackageViewProjectNode" />
-              <item name="report_1" type="616d4139:PackageViewModuleNode" />
-              <item name="XIN" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="M1-1-i235-report" type="58d84e3e:PackageViewProjectNode" />
-              <item name="report_1" type="616d4139:PackageViewModuleNode" />
-              <item name="XIN" type="1f31426a:PackageElementNode" />
-              <item name="i235.report1" type="1f31426a:PackageElementNode" />
+              <item name="ExampleR2.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
             </path>
           </expand>
           <select />
@@ -260,6 +282,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1455" height="935" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -269,7 +292,7 @@
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="6" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.37956205" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3917275" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="6" />
@@ -318,13 +341,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/XIN/i235/report1/NearestExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/XIN/i235/report1/NearestExample.java" />
     <entry file="file://$PROJECT_DIR$/src/XIN/i235/report1/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="748">
@@ -444,13 +461,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/XIN/i235/report1/NearestExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/XIN/i235/report1/NearestExample.java" />
     <entry file="file://$PROJECT_DIR$/src/XIN/ToolPackage/MyTool.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
@@ -479,13 +490,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/XIN/i235/report1/NearestExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/XIN/i235/report1/NearestExample.java" />
     <entry file="file://$PROJECT_DIR$/src/XIN/ToolPackage/MyTool.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
@@ -507,13 +512,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/XIN/i235/report1/NearestExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/XIN/i235/report1/NearestExample.java" />
     <entry file="file://$PROJECT_DIR$/src/XIN/ToolPackage/MyTool.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -617,46 +616,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/XIN/i235/report1/NearestExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="2" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/XIN/i235/report1/NearestExample.java" />
     <entry file="file://$PROJECT_DIR$/src/XIN/i235/report1/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1556">
-          <caret line="139" column="25" lean-forward="true" selection-start-line="139" selection-start-column="25" selection-end-line="139" selection-end-column="25" />
+        <state relative-caret-position="740">
+          <caret line="151" column="79" selection-start-line="151" selection-start-column="79" selection-end-line="151" selection-end-column="79" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/XIN/i235/report1/ExampleR1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/XIN/i235/report2/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="26" column="100" lean-forward="true" selection-start-line="26" selection-start-column="100" selection-end-line="26" selection-end-column="100" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="85">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/XIN/i235/report2/ExampleR2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="43" lean-forward="true" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
+        <state relative-caret-position="265">
+          <caret line="53" column="25" selection-start-line="53" selection-start-column="25" selection-end-line="53" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/XIN/i235/report2/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="114" column="29" selection-start-line="114" selection-start-column="29" selection-end-line="114" selection-end-column="29" />
           <folding>
-            <element signature="e#585#586#0" expanded="true" />
-            <element signature="e#624#625#0" expanded="true" />
-            <element signature="e#679#680#0" expanded="true" />
-            <element signature="e#719#720#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

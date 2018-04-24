@@ -19,15 +19,21 @@ class ExampleR2 {
             y = (int) (Math.random() * 20);
         }
     }
-
+    //同じデータを検査するため//簡単書き方
     @Override
     public int hashCode() {
-        return super.hashCode();
+        //return super.hashCode();
+        //データ量が多い場合、効率が良くない、時間があれば補足する
+        return 10;
     }
-
+    //同じデータを検査するため//簡単書き方
     @Override
     public boolean equals(Object obj) {
-        return super.equals(obj);
+        //return super.equals(obj);
+        //パラメータをチェックしてない、強さが足りない、時間があれば補足する
+        //type判定不要　生成するとき左右分けで生成したので
+        ExampleR2 dataPoint = (ExampleR2) obj;
+        return this.x == dataPoint.x && this.y == dataPoint.y;
     }
 }
 
@@ -38,14 +44,14 @@ class DataPoint {
         this.x = x;
         this.y = y;
     }
-
+    //同じデータを検査するため//簡単書き方
     @Override
     public int hashCode() {
         //return super.hashCode();
         //データ量が多い場合、効率が良くない、時間があれば補足する
         return 10;
     }
-
+    //同じデータを検査するため//簡単書き方
     @Override
     public boolean equals(Object obj) {
 
