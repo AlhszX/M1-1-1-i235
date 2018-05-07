@@ -13,10 +13,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/XIN/i235/report2/Main.java">
+        <entry file="file://$PROJECT_DIR$/src/XIN/i235/report3/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="113">
-              <caret line="8" column="18" lean-forward="true" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+              <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="66" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -24,11 +24,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExampleR2.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/XIN/i235/report2/ExampleR2.java">
+      <file leaf-file-name="StoneList.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/XIN/i235/report3/StoneList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="833">
-              <caret line="49" column="39" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="39" />
+            <state relative-caret-position="250">
+              <caret line="79" lean-forward="true" selection-start-line="79" selection-end-line="79" />
+              <folding>
+                <element signature="e#413#414#0" expanded="true" />
+                <element signature="e#445#446#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -44,16 +48,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Negative</find>
-      <find>point: 8,9</find>
-      <find>pointY</find>
-      <find>pointYX</find>
-      <find>exampleN</find>
-      <find>=</find>
-      <find>pointX: 4 pointY: 7</find>
-      <find>pointX: 17 pointY: 15</find>
-      <find>turePositivePoint</find>
-      <find>neareatNeighbor</find>
       <find>Jump</find>
       <find>outPrintData</find>
       <find>DataPoint</find>
@@ -62,6 +56,28 @@
       <find>K</find>
       <find>kNearestNeighborAndDrawSpace</find>
       <find>creatAndSort</find>
+      <find>deepdee</find>
+      <find>Deep</find>
+      <find>deep</find>
+      <find>O _ X O _ X _ _ O X</find>
+      <find>O O X X X O</find>
+      <find>Node</find>
+      <find>O X O _ _ X X O</find>
+      <find>NodeSize</find>
+      <find>O X O _ _ X X O</find>
+      <find>list ***</find>
+      <find>Print out node</find>
+      <find>X X X O O O</find>
+      <find>succ</find>
+      <find>node</find>
+      <find>gameNode</find>
+      <find>printList</find>
+      <find>setList</find>
+      <find>for</find>
+      <find>i</find>
+      <find>j</find>
+      <find>stoneList =</find>
+      <find>stoneList.size()</find>
     </findStrings>
     <replaceStrings>
       <replace>pointX</replace>
@@ -73,6 +89,8 @@
       <replace>bubbleSort</replace>
       <replace>kNNAndDrawSpace</replace>
       <replace>createAndSort</replace>
+      <replace>node</replace>
+      <replace>GameNode</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -95,13 +113,18 @@
         <option value="$PROJECT_DIR$/src/XIN/i235/report1/Main.java" />
         <option value="$PROJECT_DIR$/src/XIN/i235/report2/ExampleR2.java" />
         <option value="$PROJECT_DIR$/src/XIN/i235/report2/Main.java" />
+        <option value="$PROJECT_DIR$/src/XIN/i235/report3/main.java" />
+        <option value="$PROJECT_DIR$/src/XIN/i235/report3/Stone.java" />
+        <option value="$PROJECT_DIR$/src/XIN/i235/report3/Main.java" />
+        <option value="$PROJECT_DIR$/src/XIN/i235/report3/StoneList.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1068" />
+    <option name="x" value="1012" />
+    <option name="y" value="-32" />
     <option name="width" value="1101" />
-    <option name="height" value="1392" />
+    <option name="height" value="1380" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -131,7 +154,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -163,6 +185,23 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="XIN" type="462c0819:PsiDirectoryNode" />
               <item name="i235" type="462c0819:PsiDirectoryNode" />
+              <item name="report1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="M1-1-i235-report" type="b2602c69:ProjectViewProjectNode" />
+              <item name="M1-1-i235-report" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="XIN" type="462c0819:PsiDirectoryNode" />
+              <item name="i235" type="462c0819:PsiDirectoryNode" />
+              <item name="report1" type="462c0819:PsiDirectoryNode" />
+              <item name="ExampleR1.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
+            </path>
+            <path>
+              <item name="M1-1-i235-report" type="b2602c69:ProjectViewProjectNode" />
+              <item name="M1-1-i235-report" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="XIN" type="462c0819:PsiDirectoryNode" />
+              <item name="i235" type="462c0819:PsiDirectoryNode" />
               <item name="report2" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -174,11 +213,20 @@
               <item name="report2" type="462c0819:PsiDirectoryNode" />
               <item name="ExampleR2.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
             </path>
+            <path>
+              <item name="M1-1-i235-report" type="b2602c69:ProjectViewProjectNode" />
+              <item name="M1-1-i235-report" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="XIN" type="462c0819:PsiDirectoryNode" />
+              <item name="i235" type="462c0819:PsiDirectoryNode" />
+              <item name="report3" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -201,7 +249,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main (1)">
+  <component name="RunManager" selected="Application.Main (2)">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="XIN.i235.report2.Main" />
       <module name="report_1" />
@@ -220,6 +268,17 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="XIN.ToolPackage.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="XIN.i235.report3.Main" />
+      <module name="report_1" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="XIN.i235.report3.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -268,9 +327,11 @@
     <list>
       <item itemvalue="Application.Main" />
       <item itemvalue="Application.Main (1)" />
+      <item itemvalue="Application.Main (2)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main (2)" />
         <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
       </list>
@@ -300,7 +361,7 @@
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="6" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.28345498" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.4890511" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="6" />
@@ -325,30 +386,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/XIN/i235/report2/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="9" lean-forward="true" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/XIN/i235/report1/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1139">
-          <caret line="67" column="76" lean-forward="true" selection-start-line="67" selection-start-column="76" selection-end-line="67" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/XIN/i235/report1/ExampleR1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/XIN/i235/report1/NearestExample.java" />
     <entry file="file://$PROJECT_DIR$/src/XIN/i235/report1/Main.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -625,31 +662,56 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/XIN/i235/report1/NearestExample.java" />
+    <entry file="file://$PROJECT_DIR$/src/XIN/i235/report2/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/XIN/i235/report1/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="740">
+        <state relative-caret-position="935">
           <caret line="151" column="79" selection-start-line="151" selection-start-column="79" selection-end-line="151" selection-end-column="79" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/XIN/i235/report1/ExampleR1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        <state relative-caret-position="272">
+          <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/Collections.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="554" column="27" selection-start-line="554" selection-start-column="27" selection-end-line="554" selection-end-column="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/XIN/i235/report2/ExampleR2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="49" column="39" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="39" />
+        <state relative-caret-position="34">
+          <caret line="33" column="6" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/XIN/i235/report2/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/XIN/i235/report3/StoneList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="79" lean-forward="true" selection-start-line="79" selection-end-line="79" />
+          <folding>
+            <element signature="e#413#414#0" expanded="true" />
+            <element signature="e#445#446#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/XIN/i235/report3/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="113">
-          <caret line="8" column="18" lean-forward="true" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+          <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="66" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
