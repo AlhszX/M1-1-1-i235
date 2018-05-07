@@ -95,9 +95,11 @@ final class StoneList {
     void rmSideNull() {
         while (stoneList.get(0) == null) {
             stoneList.remove(0);
+            listSize = stoneList.size();
         }
         while (stoneList.get(listSize - 1) == null) {
             stoneList.remove(listSize - 1);
+            listSize = stoneList.size();
         }
     }
 
